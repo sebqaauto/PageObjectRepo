@@ -1,5 +1,10 @@
 package PageObjectsModel.PageObjects;
 
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,20 +13,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegistrationPage {
 	WebDriver driver;
+	By locator;
+	UIHelper helper;
 	public RegistrationPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		//By locator = By.id("FirstName");
+		helper = new UIHelper();
 	}
-	
-	
-	
-//	driver.findElement(By.xpath("//label[text()='"+gender+"']/preceding-sibling::input"));
-//	driver.findElement(By.id("FirstName")).sendKeys("Michael"); //
-//	driver.findElement(By.id("LastName")).sendKeys("Jordan");//
-//	driver.findElement(By.id("Email")).sendKeys("MichaelJordan12@test12.com");//  
-//	driver.findElement(By.id("Password")).sendKeys("YouDontKnowMe123");
-//	driver.findElement(By.id("ConfirmPassword")).sendKeys("YouDontKnowMe123");
-//	driver.findElement(By.id("register-button")).click();
 	
 	@FindBy(id="FirstName")
 	WebElement firstNameField;
@@ -43,6 +42,8 @@ public class RegistrationPage {
 	
 	WebElement gender;
 	
+	List<String> userData = new ArrayList<>();
+	
 	public void selectGender(String genderType) {	
 	 gender = driver.findElement(By.xpath("//label[text()='"+genderType+"']/preceding-sibling::input"));
 	}
@@ -55,6 +56,28 @@ public class RegistrationPage {
 		passwordField.sendKeys(password);
 		confirmPasswordField.sendKeys(password);
 		registerButton.click();
+		
+		WebElement firstName2 = driver.findElement(By.id("FirstName"));
+		//driver.findElement(locator).click();
+		
+	}
+	
+	public void callGetUserData(String sheetName, int rowNo) throws IOException {
+		helper.getuserDataForRegistration(sheetName, rowNo);
+	}
+	
+	public void newUserRegistrationFromDataSheet(String sheetName, int rowNo ) throws IOException {
+		gender.click();
+		userData = helper.getuserDataForRegistration(sheetName, rowNo);
+		firstNameField.sendKeys(userData.get(0));
+		lastNameField.sendKeys(userData.get(1));
+		emailField.sendKeys(userData.get(2));
+		passwordField.sendKeys(userData.get(3));
+		confirmPasswordField.sendKeys(userData.get(4));
+		registerButton.click();
+		
+		//WebElement firstName2 = driver.findElement(By.id("FirstName"));
+		//driver.findElement(locator).click();
 		
 	}
 	
