@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" parallel="classes"  name="Test">
+	<parameter name="urlAmz" value="https://www.amazon.in/"></parameter>
+	<parameter name="searchSamsungKeyword1" value="samsung galaxy"></parameter>
+	<parameter name="searchAppleKeyword1" value="iphone"></parameter>
+	<parameter name="searchAppleKeyword2" value="iPad"></parameter>
+	<parameter name="urlDemoWebShop" value="https://demowebshop.tricentis.com/"></parameter>
+	<parameter name="" value=""></parameter>
+    <classes>
+      <class name="PageObjectsModel.DemoWebShop.AmzTestNGApple"/>
+      <class name="demoPackage.AmzTestNGSamsung"/>
+      <class name="PageObjectsModel.DemoWebShop.AppTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

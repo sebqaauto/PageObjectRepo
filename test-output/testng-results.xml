@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-14T09:32:07 IST" name="Suite" finished-at="2024-05-14T09:32:31 IST" duration-ms="24073">
+    <groups>
+    </groups>
+    <test started-at="2024-05-14T09:32:07 IST" name="Test" finished-at="2024-05-14T09:32:31 IST" duration-ms="24073">
+      <class name="PageObjectsModel.DemoWebShop.AmzTestNGApple">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:PageObjectsModel.DemoWebShop.AmzTestNGApple@1fa268de]" started-at="2024-05-14T09:32:07 IST" name="setUpDriver" finished-at="2024-05-14T09:32:10 IST" duration-ms="3125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method signature="launchSite(java.lang.String)[pri:0, instance:PageObjectsModel.DemoWebShop.AmzTestNGApple@1fa268de]" started-at="2024-05-14T09:32:14 IST" name="launchSite" finished-at="2024-05-14T09:32:16 IST" duration-ms="1877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSite -->
+        <test-method signature="searchAndAddiPad(java.lang.String)[pri:0, instance:PageObjectsModel.DemoWebShop.AmzTestNGApple@1fa268de]" started-at="2024-05-14T09:32:16 IST" name="searchAndAddiPad" finished-at="2024-05-14T09:32:18 IST" depends-on-methods="PageObjectsModel.DemoWebShop.AmzTestNGApple.launchSite" duration-ms="2234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iPad]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndAddiPad -->
+        <test-method signature="searchAndAddiPhone(java.lang.String)[pri:0, instance:PageObjectsModel.DemoWebShop.AmzTestNGApple@1fa268de]" started-at="2024-05-14T09:32:18 IST" name="searchAndAddiPhone" finished-at="2024-05-14T09:32:22 IST" depends-on-methods="PageObjectsModel.DemoWebShop.AmzTestNGApple.launchSite" duration-ms="3536" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iphone]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndAddiPhone -->
+      </class> <!-- PageObjectsModel.DemoWebShop.AmzTestNGApple -->
+      <class name="PageObjectsModel.DemoWebShop.AppTestNG">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:PageObjectsModel.DemoWebShop.AppTestNG@4a94ee4]" started-at="2024-05-14T09:32:10 IST" name="setUpDriver" finished-at="2024-05-14T09:32:12 IST" duration-ms="2243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method signature="launchBrowser(java.lang.String)[pri:0, instance:PageObjectsModel.DemoWebShop.AppTestNG@4a94ee4]" started-at="2024-05-14T09:32:14 IST" name="launchBrowser" finished-at="2024-05-14T09:32:17 IST" duration-ms="3221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://demowebshop.tricentis.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="launchDB()[pri:0, instance:PageObjectsModel.DemoWebShop.AppTestNG@4a94ee4]" started-at="2024-05-14T09:32:17 IST" name="launchDB" finished-at="2024-05-14T09:32:18 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchDB -->
+        <test-method signature="userRegistration()[pri:0, instance:PageObjectsModel.DemoWebShop.AppTestNG@4a94ee4]" started-at="2024-05-14T09:32:18 IST" name="userRegistration" finished-at="2024-05-14T09:32:31 IST" depends-on-methods="PageObjectsModel.DemoWebShop.AppTestNG.launchBrowser" duration-ms="12982" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: div.header-links-wrapper a.account
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4.1', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [78deec5f-8178-4098-b34e-da6e807494c4, findElement {using=css selector, value=div.header-links-wrapper a.account}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:29075, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 23.4.0, moz:processID: 37336, moz:profile: /var/folders/jj/xjybzy2916g..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:29075/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: 78deec5f-8178-4098-b34e-da6e807494c4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: div.header-links-wrapper a.account
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4.1', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [78deec5f-8178-4098-b34e-da6e807494c4, findElement {using=css selector, value=div.header-links-wrapper a.account}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:29075, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 23.4.0, moz:processID: 37336, moz:profile: /var/folders/jj/xjybzy2916g..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:29075/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: 78deec5f-8178-4098-b34e-da6e807494c4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+at PageObjectsModel.PageObjects.RegistrationPage.getEmailAndAddToDataSheet(RegistrationPage.java:93)
+at PageObjectsModel.DemoWebShop.AppTestNG.userRegistration(AppTestNG.java:59)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userRegistration -->
+        <test-method is-config="true" signature="takeSnapshoot()[pri:0, instance:PageObjectsModel.DemoWebShop.AppTestNG@4a94ee4]" started-at="2024-05-14T09:32:31 IST" name="takeSnapshoot" finished-at="2024-05-14T09:32:31 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getTitle()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getTitle()" because "this.driver" is null
+at PageObjectsModel.PageObjects.UIHelper.getPageTitle(UIHelper.java:102)
+at PageObjectsModel.DemoWebShop.AppTestNG.takeSnapshoot(AppTestNG.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:644)
+at org.testng.TestRunner.afterRun(TestRunner.java:914)
+at org.testng.TestRunner.run(TestRunner.java:605)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSnapshoot -->
+      </class> <!-- PageObjectsModel.DemoWebShop.AppTestNG -->
+      <class name="demoPackage.AmzTestNGSamsung">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:demoPackage.AmzTestNGSamsung@7b9a4292]" started-at="2024-05-14T09:32:12 IST" name="setUpDriver" finished-at="2024-05-14T09:32:14 IST" duration-ms="1983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method signature="launchSite(java.lang.String)[pri:0, instance:demoPackage.AmzTestNGSamsung@7b9a4292]" started-at="2024-05-14T09:32:14 IST" name="launchSite" finished-at="2024-05-14T09:32:16 IST" duration-ms="1970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSite -->
+        <test-method signature="searchAndAddSamsungGalaxy(java.lang.String)[pri:0, instance:demoPackage.AmzTestNGSamsung@7b9a4292]" started-at="2024-05-14T09:32:16 IST" name="searchAndAddSamsungGalaxy" finished-at="2024-05-14T09:32:18 IST" duration-ms="1784" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung galaxy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndAddSamsungGalaxy -->
+      </class> <!-- demoPackage.AmzTestNGSamsung -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

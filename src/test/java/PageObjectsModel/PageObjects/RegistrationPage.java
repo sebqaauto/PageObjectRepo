@@ -40,6 +40,12 @@ public class RegistrationPage {
 	@FindBy(id="register-button")
 	WebElement registerButton;
 	
+	@FindBy(css="div.header-links-wrapper a.account")
+	WebElement userEmailTextElement;
+	
+	@FindBy(css="a.ico-logout")
+	WebElement logoutLink;
+	
 	WebElement gender;
 	
 	List<String> userData = new ArrayList<>();
@@ -79,6 +85,18 @@ public class RegistrationPage {
 		//WebElement firstName2 = driver.findElement(By.id("FirstName"));
 		//driver.findElement(locator).click();
 		
+	}
+	
+	String userEmailText;
+	
+	public void getEmailAndAddToDataSheet(String sheetName) throws IOException {
+		userEmailText = userEmailTextElement.getText();
+		helper.addRegisteredUsers(userEmailText, sheetName);
+		
+	}
+	
+	public void logOut() {
+		logoutLink.click();
 	}
 	
 
